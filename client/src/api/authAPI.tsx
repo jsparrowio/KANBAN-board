@@ -15,12 +15,12 @@ const login = async (loginData: UserLogin) => {
     const loginResponse = await resp.json();
 
     // if there is an error in the response, throw an error. typically this is due to login info being incorrect, so we specify that the cause is likely that
-    if(!resp.ok) {
+    if (!resp.ok) {
       throw new Error('Error in fetch response, is the users login information correct? Check network tab for more information')
     }
 
     return loginResponse;
-    
+
     // if any error is thrown in the fetch, catch and return the error
     // since it is a promise, we also have to reject the promise with an error code
   } catch (err: any) {

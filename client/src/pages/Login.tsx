@@ -24,11 +24,11 @@ const Login = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     // check to ensure userdata is present, if not, throw error and return
-    if(!loginData.username) {
+    if (!loginData.username) {
       setErrMsg('A username must be entered');
       return;
     }
-    if(!loginData.password) {
+    if (!loginData.password) {
       setErrMsg('A password must be entered');
       return;
     }
@@ -50,17 +50,17 @@ const Login = () => {
       <form className='form' onSubmit={handleSubmit}>
         <h1>Login</h1>
         {errMsg && (
-        <p style={{'color': 'red', 'textShadow': '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000', 'textAlign': 'center'}}>{errMsg}</p>
-      )}
+          <p style={{ 'color': 'red', 'textShadow': '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000', 'textAlign': 'center' }}>{errMsg}</p>
+        )}
         <label >Username</label>
-        <input 
+        <input
           type='text'
           name='username'
           value={loginData.username || ''}
           onChange={handleChange}
         />
-      <label>Password</label>
-        <input 
+        <label>Password</label>
+        <input
           type='password'
           name='password'
           value={loginData.password || ''}
@@ -69,7 +69,7 @@ const Login = () => {
         <button type='submit'>Submit Form</button>
       </form>
     </div>
-    
+
   )
 };
 

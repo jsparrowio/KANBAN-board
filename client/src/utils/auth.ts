@@ -15,13 +15,13 @@ class AuthService {
     const token = this.getToken();
     return !!token && !this.isTokenExpired(token);
   }
-  
+
   isTokenExpired(token: string): boolean {
     // return a boolean value that indicates if the token is expired
     try {
       const decodedToken = jwtDecode<JwtPayload>(token);
 
-      if(decodedToken?.exp && decodedToken?.exp < Date.now() / 1000) {
+      if (decodedToken?.exp && decodedToken?.exp < Date.now() / 1000) {
         return true;
       } else {
         return false;
@@ -34,9 +34,9 @@ class AuthService {
   }
 
   getToken(): string {
-   // return the token
-   const currentUser = localStorage.getItem('id_token') || '';
-   return currentUser;
+    // return the token
+    const currentUser = localStorage.getItem('id_token') || '';
+    return currentUser;
   }
 
   login(idToken: string) {
