@@ -10,6 +10,7 @@ const Login = () => {
     password: ''
   });
 
+  // variable to hold error message when a user attempts to login, if any
   const [errMsg, setErrMsg] = useState<string>('');
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -22,6 +23,7 @@ const Login = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    // check to ensure userdata is present, if not, throw error and return
     if(!loginData.username) {
       setErrMsg('A username must be entered');
       return;
