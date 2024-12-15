@@ -7,10 +7,12 @@
 The Kanban Board is a virtual "whiteboard" containing to dos, in progress, and completed tasks. These are typically used for assigning, tracking, and monitoring progress on projects such as application development. The application also features a fully functioning login so that a user can login and track their individual KANBAN tasks.\
 NOTE: this project does NOT feature a sign up and you must login using one of the pre-determined logins. Application is a demo-only and not meant to be used for true project tracking.
 
-Find the deployed application here
+Find the deployed application [here](https://kanban-board-190x.onrender.com/)
 
 ## Screenshot
   
+<img src="./assets/kbbss.png" alt="screenshot">
+
 ## Table of Contents
   
 - [KANBAN Board](#kanban-board)
